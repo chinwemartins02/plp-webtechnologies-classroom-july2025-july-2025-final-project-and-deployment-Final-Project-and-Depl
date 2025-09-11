@@ -1,0 +1,155 @@
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background: #111;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #1b1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: goldenrod;
+  }
+  .logo span {
+    color: #fff;
+  }
+  
+  /* Nav */
+  .navbar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+  }
+  .navbar ul li a.active,
+  .navbar ul li a:hover {
+    color: goldenrod;
+  }
+  .hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  /* ===== Portfolio Grid ===== */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 50px 10%;
+  }
+  
+  .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 2px solid #fff;
+  }
+  
+  /* ---- Fix: Make images align & fit ---- */
+  .portfolio-item img {
+    width: 100%;
+    height: 220px;       /* consistent height */
+    object-fit: cover;   /* ensures images fill div without distortion */
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  
+  .portfolio-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .portfolio-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .portfolio-item:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay a {
+    color: goldenrod;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  /* ===== Infinity Icon ===== */
+  .infinity {
+    text-align: center;
+    padding: 20px;
+    color: goldenrod;
+    font-size: 28px;
+  }
+  
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #111;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      padding: 20px;
+    }
+    .navbar ul {
+      display: none;
+      flex-direction: column;
+      background: #1b1a1a;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 200px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  
