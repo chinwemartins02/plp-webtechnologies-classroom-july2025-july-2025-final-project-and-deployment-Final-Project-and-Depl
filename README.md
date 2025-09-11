@@ -1,6 +1,14 @@
 # 🌐 Personal Portfolio Website
 
-A **multi-page personal portfolio website** built using **HTML, CSS, and JavaScript**.  
+A **multi-page personal portfolio website** built using **HTML, CSS, and JavaScript**. 
+
+
+
+## 🔗 Live Demo
+
+👉 [View Portfolio Website](https://chinwe-martins-portfolio-website.netlify.app/)
+
+
 The website contains the following pages:
 
 - **Home** – Introduction and hero section
